@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Insurance Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #023e8a;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            color: #023e8a;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1 1 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            background: #0077b6;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background: #023e8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #03045e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Simple Insurance Platform</h1>
+    <p>Your trusted partner for life, health, and general insurance</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="home">
+    <h2>Welcome!</h2>
+    <p>We provide easy and affordable insurance solutions for individuals and businesses. Choose a plan that fits your needs and enjoy peace of mind.</p>
+</div>
+
+<div class="container" id="products">
+    <h2>Our Insurance Products</h2>
+    <div class="products">
+        <div class="product">
+            <h3>Life Insurance</h3>
+            <p>Protect your family’s future with our comprehensive life insurance plans.</p>
+        </div>
+        <div class="product">
+            <h3>Health Insurance</h3>
+            <p>Access quality healthcare without financial stress through our health plans.</p>
+        </div>
+        <div class="product">
+            <h3>General Insurance</h3>
+            <p>Cover your assets, vehicles, and property against unexpected events.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Simple Insurance Platform. All rights reserved.</p>
+</footer>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        alert('Thank you for contacting us! We will get back to you soon.');
+    }
+</script>
+<!-- Load React and ReactDOM from CDN -->
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+></script>
+
+<!-- Load Caava AI Widget from CDN -->
+<script
+  src="https://unpkg.com/@caava-ai/widget@0.1.2/dist/widget.full.js.umd.js"
+  async
+  type="text/javascript"
+></script>
+
+<!-- Floating Widget -->
+<ai-assistant-widget
+  floating="true"
+  position="bottom-right"
+  button-size="medium"
+  button-icon="💬"
+  button-text="Chat with ICEA001 - general info and products edu"
+  name="ICEA001 - general info and products edu"
+  assistant-id="12daee86-5079-44cd-8157-758e90864137"
+  api-url="http://caava.192.0.0.123.nip.io/akili/proj_12daee86/web"
+  api-key="pk-akv1_Jz7tnGOoMAX-DATtNixOkBU3Ybxd2YlPrUtjwCMfBSo"
+  enable-file-upload="true"
+  theme='{&quot;primaryColor&quot;:&quot;#000000&quot;,&quot;backgroundColor&quot;:&quot;#ffffff&quot;}'
+>
+</ai-assistant-widget>
+
+</body>
+</html>
